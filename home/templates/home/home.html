@@ -1,0 +1,44 @@
+{% extends "home/base.html" %}
+{% block title %}Home – My Journal{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <h1>Welcome to Your Journal</h1>
+    <p class="date">Today is {{ today|date:"F j, Y" }}</p>
+    <blockquote>
+      “Start writing, no matter what. The water does not flow until the faucet is turned on.”  
+      <footer>— Louis L’Amour</footer>
+    </blockquote>
+  </section>
+
+  <section class="recent-entries">
+    <h2>Recent Entries</h2>
+    {% if entries %}
+      <ul class="entry-list">
+        {% for entry in entries %}
+          <li>
+            <a href="{% url 'entry_detail' entry.id %}">
+              <h3>{{ entry.title }}</h3>
+              <p class="entry-date">{{ entry.created_at|date:"F j, Y, P" }}</p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No entries yet. <a href="{% url 'entry_create' %}" class="btn btn-primary">Write your first one</a>.</p>
+    {% endif %}
+  </section>
+
+  <section class="actions">
+    {% if user.is_authenticated %}
+      <a href="{% url 'entry_create' %}" class="btn btn-primary">+ New Journal Entry</a>
+    {% else %}
+      <p>
+        <a href="{% url 'login' %}">Log in</a>
+        or
+        <a href="{% url 'signup' %}">Sign Up</a>
+        to start journaling.
+      </p>
+    {% endif %}
+  </section>
+{% endblock %}
