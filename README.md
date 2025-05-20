@@ -1,8 +1,3 @@
-Here’s a clean and professional README.md tailored to your current Django journaling app setup:
-
-⸻
-
-
 # 📝 Journaling App
 
 A personal journaling web app built with Django and HTML. Users can create, view, and manage journal entries with a clean, server-rendered interface.
@@ -20,23 +15,25 @@ A personal journaling web app built with Django and HTML. Users can create, view
 
 ## 📁 Project Structure
 
+```text
 Journaling-App/
 ├── .venv/               # Virtual environment
 ├── journalproj/         # Django project settings
 │   ├── settings.py
 │   ├── urls.py
-│   └── …
+│   └── ...
 ├── db.sqlite3           # Local SQLite database
 ├── manage.py            # Django CLI script
 ├── requirements.txt     # Project dependencies
 └── .gitignore           # Ignored files (e.g., .venv, db)
 
----
 
-## ⚙️ Setup Instructions
+⸻
 
-### 1. Clone the repository
-```bash
+⚙️ Setup Instructions
+
+1. Clone the repository
+
 git clone https://github.com/drewstake/Journaling-App.git
 cd Journaling-App
 
@@ -75,7 +72,4 @@ This project is for educational and personal development use.
 
 ---
 
-Let me know if you want:
-- A version with user auth and `entries` app scaffolded
-- The README pushed to GitHub automatically  
-- Badges (e.g., Python version, Django version) added at the top
+Let me know when you're ready to add the `entries` app and build out the journal functionality.
