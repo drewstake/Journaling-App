@@ -1,6 +1,0 @@
-# requirements.txt
-
-# Python version: 3.13.2 (not listed here since pip manages packages)
-Django==5.2.1
-asgiref==3.8.1
-sqlparse==0.5.3
